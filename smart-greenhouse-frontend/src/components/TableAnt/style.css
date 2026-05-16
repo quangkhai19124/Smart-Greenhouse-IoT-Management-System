@@ -1,0 +1,16 @@
+.light-row {
+  background-color: #f6fff9 !important;
+}
+.ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ant-table-thead > tr > th {
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.ant-table-cell {
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}

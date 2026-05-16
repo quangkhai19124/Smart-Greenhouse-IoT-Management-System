@@ -1,0 +1,59 @@
+{
+  "name": "smart-greenhouse-backend",
+  "version": "1.0.0",
+  "description": "Backend for Smart Greenhouse System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js",
+    "prod": "babel-node src/server.js",
+    "migrate": "npx sequelize-cli db:migrate --config src/config/config.js --migrations-path src/migrations",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo --config src/config/config.js --migrations-path src/migrations",
+    "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --config src/config/config.js --migrations-path src/migrations",
+    "seed": "npx sequelize-cli db:seed:all --config src/config/config.js --seeders-path src/seeders",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all --config src/config/config.js --seeders-path src/seeders",
+    "seed:undo:all": "npx sequelize-cli db:seed:undo:all --config src/config/config.js --seeders-path src/seeders",
+    "lint": "eslint 'src/**/*.js'",
+    "lint:fix": "eslint 'src/**/*.js' --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.3",
+    "@google/genai": "^0.3.1",
+    "aedes": "^0.51.3",
+    "axios": "^1.12.2",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mqtt": "^5.14.1",
+    "mysql2": "^3.15.1",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3"
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint --fix --max-warnings=0"
+  }
+}

@@ -1,0 +1,251 @@
+.app-sider-menu .ant-menu-item {
+  font-weight: 450;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: rgb(203, 200, 200)791;
+  transition: none !important;
+}
+
+.app-sider-menu .ant-menu-item-selected {
+  color: white;
+  transition: none !important;
+}
+
+.app-sider-menu .ant-menu-item .ant-menu-title-content {
+  transition: none !important;
+}
+
+.recharts-surface:focus {
+  outline: none;
+}
+
+/* Customize tooltip cursor background */
+.recharts-tooltip-cursor {
+  fill: #e5fff3 !important;
+  opacity: 0.8 !important;
+  rx: 8 !important; /* Bo góc trên */
+  ry: 8 !important; /* Bo góc dưới */
+}
+
+/* Customize tooltip content (text box) */
+.recharts-tooltip-wrapper {
+  border-radius: 12px !important;
+}
+
+.recharts-default-tooltip {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+@import "tailwindcss";
+
+@import "./pages/fonts/Gilgroy.css";
+
+html,
+body,
+#root,
+html body,
+.ant-app {
+    font-family: 'Gilroy', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+@theme {
+    --color-greenhouse-primary: #08F08C;
+    --color-greenhouse-dark: #06C270;
+    --color-greenhouse-light: #e5fff3;
+    --color-greenhouse-background: #FAFAFA;
+}
+
+@keyframes float-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float-vertical {
+  animation: float-vertical 4s ease-in-out infinite;
+}
+
+@keyframes float-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-float-horizontal {
+  animation: float-horizontal 4s ease-in-out infinite;
+}
+
+/* Splash Screen Animations */
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 1s ease-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+    visibility: hidden;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@layer utilities {
+  .floating-icon {
+    @apply absolute z-[1] opacity-80;
+  }
+}
+
+.ant-notification .ant-notification-notice-content .ant-notification-notice-with-icon {
+  display: flex;
+  align-items: start;
+  gap: 0.625rem;
+  /* 2.5 * 0.25rem */
+}
+
+/* success */
+.ant-notification .notification-success-custom .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-icon {
+  position: relative;
+  top: 0;
+}
+
+/* error */
+.ant-notification .notification-error-custom .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-icon {
+  position: relative;
+  top: 0;
+}
+
+.ant-notification .notification-error-custom-dark .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-icon {
+  position: relative;
+  top: 0;
+}
+
+
+.ant-notification .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-message {
+  margin-bottom: 0;
+  margin-inline-start: 0;
+  font-size: 14px !important;
+  font-weight: 400;
+  color: #1f2937;
+  /* text-gray-900 */
+}
+
+.ant-notification .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-description {
+  display: none;
+}
+
+.ant-notification .ant-notification-notice-close {
+  top: 50%;
+  right: 1rem;
+  /* 4 * 0.25rem */
+  align-items: end !important;
+  transform: translateY(-50%);
+}
+
+.ant-notification .notification-success-custom {
+  border-radius: 0.125rem;
+  /* 2px */
+  padding-left: 1rem;
+  /* 4 * 0.25rem */
+  padding-right: 1rem;
+  /* 4 * 0.25rem */
+  padding-top: 0.5rem;
+  /* 2 * 0.25rem */
+  border: 1px solid #88D488 !important;
+  /* border-green-200 */
+  background-color: #E5F7E5 !important;
+  /* bg-green-50 */
+  font-family: 'Gilroy', sans-serif !important;
+}
+
+.ant-notification .notification-error-custom {
+  border-radius: 0.125rem;
+  /* 2px */
+  padding-left: 1rem;
+  /* 4 * 0.25rem */
+  padding-right: 1rem;
+  /* 4 * 0.25rem */
+  padding-bottom: 0.5rem;
+  /* 2 * 0.25rem */
+  border: 1px solid #F99A9D !important;
+  /* border-red-500 */
+  background-color: #FDE9EA !important;
+  /* bg-red-50 */
+  font-family: 'Gilroy', sans-serif !important;
+}
+
+.ant-notification .notification-error-custom-dark {
+  border-radius: 0.125rem;
+  /* 2px */
+  padding-left: 1rem;
+  /* 4 * 0.25rem */
+  padding-right: 1rem;
+  /* 4 * 0.25rem */
+  padding-bottom: 0.5rem;
+  /* 2 * 0.25rem */
+  border: 1px solid #333334 !important;
+  /* border-red-500 */
+  background-color: #21252B !important;
+  /* bg-red-50 */
+  font-family: 'Gilroy', sans-serif !important;
+  /* shadow */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+}
+
+.ant-notification .notification-error-custom-dark .ant-notification-notice-content .ant-notification-notice-with-icon .ant-notification-notice-message {
+  color: #a9a9a9 !important;
+  /* text-gray-900 */
+}
+
+.ant-notification .notification-error-custom-dark .ant-notification-notice-close {
+  color: #a9a9a9 !important;
+}
+
+.ant-notification-close-icon {
+  color: red !important; /* Đổi sang màu mong muốn */
+}

@@ -1,0 +1,34 @@
+'use strict';
+
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    // Update thiết bị ID = 2 → switch1
+    await queryInterface.bulkUpdate(
+      'Device',
+      { adaDevName: 'switch1' }, // giá trị mới
+      { id: 2 }                  // điều kiện
+    );
+
+    // Update thiết bị ID = 3 → switch2
+    await queryInterface.bulkUpdate(
+      'Device',
+      { adaDevName: 'switch' },
+      { id: 3 }
+    );
+  },
+
+  async down(queryInterface, Sequelize) {
+    // Rollback về giá trị cũ 'switch'
+    await queryInterface.bulkUpdate(
+      'Device',
+      { adaDevName: 'switch' },
+      { id: 2 }
+    );
+
+    await queryInterface.bulkUpdate(
+      'Device',
+      { adaDevName: 'switch2' },
+      { id: 3 }
+    );
+  }
+};

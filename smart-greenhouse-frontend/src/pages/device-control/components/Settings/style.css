@@ -1,0 +1,38 @@
+.selected-value {
+  width: 100% !important;
+}
+
+.selected-value .ant-select-selector {
+  width: 100% !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.selected-value .ant-select-selector:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.add-input .ant-input-number-input {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.add-input .ant-input-number-input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.add-input .ant-input-number:focus,
+.add-input .ant-input-number-focused {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
